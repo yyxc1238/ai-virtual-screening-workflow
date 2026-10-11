@@ -82,7 +82,7 @@ cd code
 # 单表预测：输入 CSV 需含 mol_id, smiles 两列；可选 vina_docking_score 列
 # 蛋白/口袋残基数建议提供真实值（输入同名列 > 命令行参数 > 0+警告）
 python predict.py --input candidates.csv --output results.csv \
-    2. **化学空间覆盖稀疏区**：显著超出常规类药分子量范围的超大、高柔性分子在 PDBBind 中覆盖
+    --prot_seq_len 400 --prot_n_residues 400 --pocket_n_residues 20
 
 # 分子库批量快筛（域内优先排序）
 python screen.py --input library.csv --topk 50
@@ -147,7 +147,7 @@ print(pkd, ic50_uM)
 
 1. **随机划分乐观偏差**：正式权重采用随机 KFold；骨架审计显示存在约 0.057 的
    R² 落差（见 §3）。排序参考可用，不宜当绝对结合能解读。
-2. **化学空间覆盖稀疏区**：分子量 700–1300 的多环糖苷类大分子在 PDBBind 中覆盖
+2. **化学空间覆盖稀疏区**：显著超出常规类药分子量范围的超大、高柔性分子在 PDBBind 中覆盖
    稀疏，模型对该区域外推不确定性大；此类候选不应以模型分为唯一依据，建议结合
    分子对接、分子动力学等下游证据综合裁决。
 3. **2D+快筛口径差异**：`predict.py`/`screen.py` 与全特征训练分布存在口径差异
