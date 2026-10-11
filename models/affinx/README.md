@@ -82,7 +82,7 @@ cd code
 # 单表预测：输入 CSV 需含 mol_id, smiles 两列；可选 vina_docking_score 列
 # 蛋白/口袋残基数建议提供真实值（输入同名列 > 命令行参数 > 0+警告）
 python predict.py --input candidates.csv --output results.csv \
-    --prot_seq_len 400 --prot_n_residues 400 --pocket_n_residues 20
+    2. **化学空间覆盖稀疏区**：显著超出常规类药分子量范围的超大、高柔性分子在 PDBBind 中覆盖
 
 # 分子库批量快筛（域内优先排序）
 python screen.py --input library.csv --topk 50
