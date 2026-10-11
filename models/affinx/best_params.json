@@ -1,0 +1,23 @@
+{
+  "best_trial": 43,
+  "best_score": 0.5040925073623657,
+  "best_cv_r2": 0.5628714084625244,
+  "best_cv_r2_std": 0.014393094301353751,
+  "best_train_r2": 0.7588010787963867,
+  "best_gap": 0.19592967033386233,
+  "params": {
+    "n_estimators": 700,
+    "max_depth": 6,
+    "learning_rate": 0.04661743426710158,
+    "subsample": 0.5292823802012635,
+    "colsample_bytree": 0.5577648842921343,
+    "min_child_weight": 12,
+    "reg_alpha": 0.5050242657275832,
+    "reg_lambda": 21.176634174733486,
+    "objective": "reg:squarederror",
+    "tree_method": "hist",
+    "random_state": 42,
+    "n_jobs": -1,
+    "verbosity": 0
+  }
+}

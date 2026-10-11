@@ -1,0 +1,14 @@
+# AffinX（XGBoost v3 pKd 模型）运行依赖
+# Python >= 3.10
+numpy>=2.0          # applicability_domain.py 使用 np.bitwise_count（整数 popcount），必须 >= 2.0
+pandas>=2.0
+scipy>=1.10
+scikit-learn>=1.3
+rdkit>=2023.9       # pip 包名 rdkit（conda 环境名 rdkit 亦可）
+xgboost>=2.0
+optuna>=3.4
+biopython>=1.81     # step2 蛋白结构解析（Bio.PDB）
+matplotlib>=3.7     # step3 可视化；无显示环境请设置 MPLBACKEND=Agg
+
+# 注：step2 的 3D/接触/对接能量特征依赖外部工具（PLIP、OpenBabel、AutoDock Vina）
+# 预先生成的特征表，非 pip 依赖；仅运行 2D 特征训练或 predict/screen 推理时无需安装。

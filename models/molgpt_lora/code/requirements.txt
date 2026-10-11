@@ -1,0 +1,11 @@
+# MolGPT-LoRA（生成模型 + 质检链）运行依赖
+# Python >= 3.10；GPU 可选（微调建议 GPU，生成 CPU 亦可）
+torch>=2.0
+transformers>=4.46   # Trainer 的 processing_class 参数需较新版本
+peft>=0.14
+accelerate>=0.30     # transformers Trainer 运行依赖
+pandas>=2.0
+numpy>=1.26
+rdkit>=2023.9
+Pillow>=10.0         # qc_sample.py 拼接总览网格
+matplotlib>=3.7      # generate_and_compare.py 对比图；无显示环境请设置 MPLBACKEND=Agg

@@ -1,0 +1,14 @@
+{
+  "model": "msb-roshan/molgpt (local)",
+  "task": "CLM autoregressive generation",
+  "train_loss": 8.663789081573487,
+  "epochs": 10,
+  "lr": 0.0003,
+  "lora_r": 8,
+  "lora_alpha": 32,
+  "lora_dropout": 0.1,
+  "batch_size": 4,
+  "grad_accum": 4,
+  "dataset_size": 37,
+  "gpu_used": true
+}

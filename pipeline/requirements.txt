@@ -1,0 +1,28 @@
+# 主干计算管线脚本依赖（与各脚本一一对应，均为宽松下限版本）
+# 安装：pip install -r requirements.txt
+# 注：rdkit / pdbfixer / openmm 若 pip 安装失败，建议 conda install -c conda-forge <包名>
+
+# ---- 基础科学计算（02/03/05/08 等）----
+numpy>=1.23
+pandas>=1.5
+
+# ---- 化学信息学（03/04/05/06/07）----
+rdkit>=2022.09.1
+
+# ---- 01 结构预处理 ----
+pdbfixer>=1.9
+openmm>=7.7
+
+# ---- 03/05 对接 ----
+vina>=1.2.3
+meeko>=0.5.0
+
+# ---- 06 物理规则质检 ----
+posebusters>=0.2.2
+
+# ---- 08 MD 轨迹分析 ----
+MDAnalysis>=2.4.0
+
+# ---- 外部命令行工具（非 pip 包）----
+# fpocket（02 口袋识别）：conda install -c conda-forge fpocket 或 apt install fpocket
+# GROMACS（09 篇 MD 模拟本体）：https://www.gromacs.org（08 脚本只做产物分析，不需要它）

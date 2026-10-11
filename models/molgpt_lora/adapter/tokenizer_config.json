@@ -1,0 +1,19 @@
+{
+  "backend": "tokenizers",
+  "bos_token": "<bos>",
+  "clean_up_tokenization_spaces": true,
+  "eos_token": "<eos>",
+  "extra_special_tokens": [
+    "<bos>",
+    "<eos>"
+  ],
+  "is_local": true,
+  "local_files_only": false,
+  "max_length": 64,
+  "model_max_length": 1000000000000000019884624838656,
+  "pad_token": "<eos>",
+  "stride": 0,
+  "tokenizer_class": "TokenizersBackend",
+  "truncation_side": "right",
+  "truncation_strategy": "longest_first"
+}
